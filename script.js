@@ -60,20 +60,4 @@ document.addEventListener("DOMContentLoaded", function () {
   addMoreButton.addEventListener("click", function () {
     fetchAndAppendImages(photoContainer, 4);
   });
-
-  function toggleAddMoreButtonVisibility() {
-    const lastImage = document.querySelector(".photo-item:last-child");
-    const lastImageBottom = lastImage.getBoundingClientRect().bottom;
-    const windowHeight = window.innerHeight;
-
-    if (lastImageBottom <= windowHeight) {
-      //show the button when the last image is at or above the bottom of the window
-      addMoreButton.style.display = "block";
-    } else {
-      addMoreButton.style.display = "none"; //hide the button
-    }
-  }
-
-  window.addEventListener("scroll", toggleAddMoreButtonVisibility);
-  toggleAddMoreButtonVisibility();
 });
