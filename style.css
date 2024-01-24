@@ -186,6 +186,7 @@ img {
   padding: 1rem;
   box-sizing: border-box;
   font-family: "Open Sans";
+  transform: translateY(-6%);
 }
 
 .small-text {
